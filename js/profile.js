@@ -46,7 +46,15 @@ function setHeaderUser(profile) {
 
 async function personalizeHeader() {
   const { data: { session } } = await supabase.auth.getSession();
-  if (!session) return;
+  if (!session) {
+    const link = document.getElementById('header-user');
+    if (link) {
+      link.href = 'login.html';
+      link.title = 'Entrar';
+      link.textContent = '👤';
+    }
+    return;
+  }
 
   const { data } = await supabase
     .from('profiles')
@@ -180,6 +188,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       const username = document.getElementById('profile-username').value.trim();
       const fullName = document.getElementById('profile-full-name').value.trim();
       const bio = document.getElementById('profile-bio').value.trim();
+      const newPassword = document.getElementById('profile-new-password')?.value || '';
+
+      if (newPassword && newPassword.length < 6) {
+        profileMessage('A nova senha deve ter pelo menos 6 caracteres.', 'error');
+        return;
+      }
 
       if (username && !/^[a-zA-Z0-9_.-]{3,30}$/.test(username)) {
         profileMessage('O nome de usuário deve ter de 3 a 30 caracteres e usar apenas letras, números, ponto, hífen ou sublinhado.', 'error');
@@ -206,6 +220,15 @@ document.addEventListener('DOMContentLoaded', async () => {
           profileMessage(error.message || 'Não foi possível salvar o perfil.', 'error');
         }
         return;
+      }
+
+      if (newPassword) {
+        const { error: passwordError } = await supabase.auth.updateUser({ password: newPassword });
+        if (passwordError) {
+          profileMessage(passwordError.message || 'O perfil foi salvo, mas não foi possível alterar a senha.', 'error');
+          return;
+        }
+        document.getElementById('profile-new-password').value = '';
       }
 
       loaded.profile = {
