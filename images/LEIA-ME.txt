@@ -1,0 +1,8 @@
+Coloque aqui as fotos com estes nomes:
+hero.jpg (banner da página inicial)
+arena-barueri.jpg
+parque-dom-jose.jpg
+kartodromo.jpg
+praca-das-artes.jpg
+feira-noturna.jpg
+museu-da-biblia.jpg
