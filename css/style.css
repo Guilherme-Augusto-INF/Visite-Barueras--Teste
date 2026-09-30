@@ -40,7 +40,7 @@ nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
 /* ---------- Início ---------- */
 .hero{min-height:340px;display:flex;flex-direction:column;justify-content:center;gap:10px;
   padding:40px 8%;background:linear-gradient(rgba(55,118,181,.78),rgba(42,93,148,.85)),
-  url('images/hero.jpg') center/cover,var(--azul)}
+  url('https://commons.wikimedia.org/wiki/Special:FilePath/Montagem_Barueri.png?width=1600') center/cover,var(--azul)}
 .hero h1{font-size:3rem;line-height:1.05}
 .hero h1 .pin{color:#e53935}
 .hero p{letter-spacing:4px;font-size:.95rem;opacity:.9}
@@ -135,4 +135,13 @@ textarea{resize:vertical}
 @media(max-width:700px){
   .profile-heading{flex-direction:column}
   .profile-status{white-space:normal}
+}
+
+
+/* ---------- Acessibilidade básica ---------- */
+.skip-link{position:fixed;left:12px;top:-80px;z-index:1000;background:#fff;color:#2a5d94;padding:10px 14px;border-radius:8px;font-weight:700;box-shadow:var(--sombra)}
+.skip-link:focus{top:12px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
