@@ -105,3 +105,34 @@ textarea{resize:vertical}
 
 .credito-foto{font-size:.85rem;color:#254e7b;margin:-12px 0 22px;line-height:1.5}
 .credito-foto a{text-decoration:underline}
+
+/* ---------- Perfil ---------- */
+.profile-layout{display:grid;grid-template-columns:300px 1fr;gap:24px;align-items:start}
+.profile-card{text-align:center;padding:30px 24px;position:sticky;top:86px}
+.avatar-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;margin-bottom:20px}
+.avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;border:5px solid var(--branco);box-shadow:var(--sombra);background:rgba(255,255,255,.14)}
+.avatar-placeholder{display:grid;place-items:center;font-size:3.8rem}
+.avatar-button{display:inline-block;background:var(--amarelo);color:var(--azul-esc);border-radius:20px;padding:8px 16px;font-weight:700;cursor:pointer;margin:0}
+.profile-card h2{font-size:1.45rem;margin-bottom:4px;word-break:break-word}
+.profile-email{font-size:.85rem;opacity:.8;word-break:break-word;margin-bottom:18px}
+.btn-secondary{background:transparent;color:var(--branco);border:2px solid var(--branco);font-size:1rem}
+.profile-form{padding:30px}
+.profile-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:24px}
+.profile-heading h2{font-size:2rem}
+.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:2px;opacity:.7}
+.profile-status{background:rgba(255,255,255,.12);border-radius:20px;padding:7px 12px;font-size:.78rem;white-space:nowrap}
+.profile-form label{margin-bottom:18px}
+.profile-form small{display:block;margin-top:6px;opacity:.7;font-size:.78rem;font-weight:400}
+.profile-form input:disabled{opacity:.65;cursor:not-allowed}
+.form-message{min-height:24px;margin:5px 0 10px;font-weight:700}
+.form-message.success{color:#d7ffd9}
+.form-message.error{color:#ffe0e0}
+.user img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+@media(max-width:800px){
+  .profile-layout{grid-template-columns:1fr}
+  .profile-card{position:static}
+}
+@media(max-width:700px){
+  .profile-heading{flex-direction:column}
+  .profile-status{white-space:normal}
+}
