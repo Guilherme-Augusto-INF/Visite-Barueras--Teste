@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadastro – Visite Barueri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/auth.js" defer></script>
+</head>
+<body>
+<main>
+<section class="page auth">
+  <a class="home" href="index.html" title="Início">🏠</a>
+  <form class="caixa" id="signup-form">
+    <h2>Cadastro</h2>
+    <label>Email:<input id="signup-email" type="email" placeholder="Digite o email..." autocomplete="email" required></label>
+    <label>Senha:<input id="signup-password" type="password" placeholder="Digite a senha..." autocomplete="new-password" minlength="6" required></label>
+    <label>Confirmar senha:<input id="signup-password-confirm" type="password" placeholder="Confirme a senha..." autocomplete="new-password" minlength="6" required></label>
+    <p id="signup-message" role="alert" aria-live="polite"></p>
+    <button class="btn" type="submit">Cadastrar</button>
+  </form>
+</section>
+</main>
+<footer class="rodape">© 2026 – Visite Barueri</footer>
+</body>
+</html>
