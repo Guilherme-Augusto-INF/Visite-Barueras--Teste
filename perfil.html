@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meu perfil – Visite Barueri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/profile.js" defer></script>
+</head>
+<body>
+<header class="topo">
+  <a class="logo" href="index.html"><span class="pin">📍</span><span>Visite<br>Barueri</span></a>
+  <nav>
+    <div class="menu">
+      <button>Sobre Barueri ▾</button>
+      <div class="sub">
+        <a href="historia.html">História de Barueri</a>
+        <a href="curiosidades.html">Curiosidades</a>
+        <a href="quem-somos.html">Quem somos</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+    <div class="menu">
+      <button>Lugares Turísticos ▾</button>
+      <div class="sub">
+        <a href="locais.html">Todos os locais</a>
+        <a href="arena-barueri.html">Arena Barueri</a>
+        <a href="parque-dom-jose.html">Parque Dom José</a>
+        <a href="kartodromo.html">Kartódromo</a>
+        <a href="praca-das-artes.html">Praça das Artes</a>
+        <a href="feira-noturna.html">Feira Noturna</a>
+        <a href="museu-da-biblia.html">Museu da Bíblia</a>
+      </div>
+    </div>
+  </nav>
+  <a class="user" id="header-user" href="perfil.html" title="Meu perfil">👤</a>
+</header>
+
+<main>
+<section class="page profile-page">
+  <div class="faixa">Meu perfil</div>
+  <div class="conteudo">
+    <div class="profile-layout">
+      <aside class="profile-card caixa">
+        <div class="avatar-wrap">
+          <img id="profile-avatar-preview" class="avatar" alt="Foto do perfil" hidden>
+          <div id="profile-avatar-placeholder" class="avatar avatar-placeholder">👤</div>
+          <label class="avatar-button" for="avatar-input">📷 Alterar foto</label>
+          <input id="avatar-input" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+        </div>
+        <h2 id="profile-display-name">Seu perfil</h2>
+        <p id="profile-display-email" class="profile-email"></p>
+        <button id="logout-button" class="btn btn-secondary" type="button">Sair da conta</button>
+      </aside>
+
+      <form class="caixa profile-form" id="profile-form">
+        <div class="profile-heading">
+          <div>
+            <span class="eyebrow">Sua conta</span>
+            <h2>Editar informações</h2>
+          </div>
+          <span class="profile-status">✦ Visite Barueri</span>
+        </div>
+
+        <label>Nome de usuário
+          <input id="profile-username" type="text" maxlength="30" placeholder="Ex.: isaque123" autocomplete="nickname">
+          <small>Será o nome exibido no seu perfil.</small>
+        </label>
+
+        <label>Nome completo
+          <input id="profile-full-name" type="text" maxlength="80" placeholder="Como você gostaria de ser chamado?" autocomplete="name">
+        </label>
+
+        <label>Sobre você
+          <textarea id="profile-bio" maxlength="240" rows="5" placeholder="Conte um pouco sobre você e seus lugares favoritos em Barueri..."></textarea>
+        </label>
+
+        <label>Email
+          <input id="profile-email" type="email" disabled>
+        </label>
+
+        <p id="profile-message" class="form-message" role="alert" aria-live="polite"></p>
+        <button class="btn" type="submit">Salvar alterações</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="rodape">© 2026 – Visite Barueri</footer>
+</body>
+</html>
