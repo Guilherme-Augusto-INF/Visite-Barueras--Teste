@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login – Visite Barueri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/auth.js" defer></script>
+</head>
+<body>
+<main>
+<section class="page auth">
+  <a class="home" href="index.html" title="Início">🏠</a>
+  <form class="caixa" id="login-form">
+    <h2>Login</h2>
+    <label>Email:<input id="login-email" type="email" placeholder="Digite o email..." autocomplete="email" required></label>
+    <label>Senha:<input id="login-password" type="password" placeholder="Digite a senha..." autocomplete="current-password" required></label>
+    <div class="links"><a href="recuperar-senha.html">Esqueci minha senha</a><a href="cadastro.html">Cadastre-se</a></div>
+    <p id="login-message" role="alert" aria-live="polite"></p>
+    <button class="btn" type="submit">Entrar</button>
+  </form>
+</section>
+</main>
+<footer class="rodape">© 2026 – Visite Barueri</footer>
+</body>
+</html>
