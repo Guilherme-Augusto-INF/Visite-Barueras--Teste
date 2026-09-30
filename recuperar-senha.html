@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recuperar senha – Visite Barueri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/auth.js" defer></script>
+</head>
+<body>
+<main>
+<section class="page auth">
+  <a class="home" href="index.html" title="Início">🏠</a>
+  <form class="caixa" id="recovery-form">
+    <h2 id="recovery-title">Recuperar senha</h2>
+    <div id="request-reset">
+      <label>Email:<input id="recovery-email" type="email" placeholder="Digite o email..." autocomplete="email" required></label>
+      <p id="recovery-message" role="alert" aria-live="polite"></p>
+      <button class="btn" type="submit">Enviar link</button>
+    </div>
+    <div id="set-new-password" hidden>
+      <label>Nova senha:<input id="new-password" type="password" placeholder="Digite a nova senha..." autocomplete="new-password" minlength="6"></label>
+      <label>Confirmar senha:<input id="new-password-confirm" type="password" placeholder="Confirme a nova senha..." autocomplete="new-password" minlength="6"></label>
+      <p id="new-password-message" role="alert" aria-live="polite"></p>
+      <button class="btn" type="button" id="update-password">Salvar nova senha</button>
+    </div>
+    <div class="links"><a href="login.html">Voltar para o login</a></div>
+  </form>
+</section>
+</main>
+<footer class="rodape">© 2026 – Visite Barueri</footer>
+</body>
+</html>
