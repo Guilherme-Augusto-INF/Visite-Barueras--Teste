@@ -171,8 +171,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (error) throw error;
 
+        loaded.profile.avatar_url = avatarUrl;
         updateAvatar(avatarUrl, loaded.profile.full_name || loaded.profile.username);
-        setHeaderUser({ ...loaded.profile, avatar_url: avatarUrl });
+        setHeaderUser(loaded.profile);
         profileMessage('Foto atualizada com sucesso.', 'success');
       } catch (error) {
         console.error('Avatar:', error);
